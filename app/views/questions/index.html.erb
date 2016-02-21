@@ -1,1 +1,21 @@
-hh
+・トップページ
+
+<% if user_signed_in? %>
+<li><%= link_to "マイページ", user_path(id: current_user.id) %></li>
+
+
+<li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+
+
+<li><%= link_to "投稿画面",new_question_path %></li>
+<% else %>
+
+
+
+
+
+
+
+<li><%= link_to " ログイン", new_user_session_path %></li>
+
+<% end %>

@@ -1,6 +1,9 @@
-class CreateQuestions < ActiveRecord::Migration
+class Create
+s < ActiveRecord::Migration
   def change
-    create_table :questions do |t|
+    create_table :
+
+s do |t|
       t.string :title
       t.text :content
       t.integer :user_id
