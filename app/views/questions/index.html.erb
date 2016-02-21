@@ -10,12 +10,11 @@
 <li><%= link_to "投稿画面",new_question_path %></li>
 <% else %>
 
-
-
-
-
-
-
 <li><%= link_to " ログイン", new_user_session_path %></li>
 
+
+
 <% end %>
+
+
+<%= render partial: "questions/question", collection: @questions %>

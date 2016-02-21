@@ -6,7 +6,7 @@ class Question < ActiveRecord::Base
 
 
   #validation
-  validates_presence_of :user_id, :text
+  validates_presence_of :user_id, :title
 
 end
 
