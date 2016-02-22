@@ -1,7 +1,10 @@
 class QuestionsController < ApplicationController
 before_action :authenticate_user!, except: :index
  def index
-  @questions = current_user.questions
+
+    # @questions = current_user.questions
+    @questions = Question.all
+
  end
  def new
   @question = Question.new

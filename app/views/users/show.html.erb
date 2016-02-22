@@ -1,1 +1,7 @@
 <%= @user.name %>のユーザーページです。
+<% if user_signed_in %>
+      <div class="profile_edit">
+        <%= link_to "プロフィール編集", edit_user_path(@user), {:class => "btn btn-primary withripple" }%>
+      </div>
+
+<% end %>
