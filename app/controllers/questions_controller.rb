@@ -12,6 +12,11 @@ before_action :authenticate_user!, except: :index
  end
 
 
+def show
+    @question = Question.find(params[:id])
+    @answers = @question.answers
+  end
+
 
 private
   def create_params

@@ -1,2 +1,9 @@
-
+      <span><%= link_to question.user.name, user_path(question.user) %></span>
+      <time><%= time_ago_in_words question.created_at %></time>
       <span class="question_title"><%= question.title %></span>
+
+      <div class="questioned">
+      <span>回答<%= question.answers.count %>件</span>
+    </div>
+    <%= link_to " 回答する", new_question_answer_path(question) %>
+    <%= link_to "回答#{question.answers.count}件", question_path(question) %>

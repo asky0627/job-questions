@@ -2,7 +2,7 @@ class Question < ActiveRecord::Base
 
   #association
   belongs_to :user
-
+  has_many :answers
 
 
   #validation
