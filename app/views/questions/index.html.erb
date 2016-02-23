@@ -1,3 +1,14 @@
+
+<% unless current_user.follower? @user  %>
+ <h2>まずは、あなたの興味に合うユーザーをフォローしましょう！</h2>
+<p>興味がある業界、興味がある企業、興味があるユーザーをフォローして就活に必要な情報を手に入れよう！</p>
+
+<%= link_to "フォローする", users_path %>
+
+
+<% else %>
+
+<% end %>
 ・トップページ
 
 <% if user_signed_in? %>

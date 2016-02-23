@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
- resources :users, only: [:show, :edit, :update]
- root to:"questions#index"
- resources :questions do 
- resources :answers, only: [:new, :create] 
+ resources :relations
+ resources :users, only: [:show, :edit, :update, :index]
+ root "questions#index"
+ resources :questions do
+ resources :answers, only: [:new, :create]
  end
  resources :questions, only: [:create, :show]
  resources :users, only: :show
+# フォロー機能（あってるか不明）
 end
+

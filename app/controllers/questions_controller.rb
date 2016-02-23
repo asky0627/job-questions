@@ -4,6 +4,8 @@ before_action :authenticate_user!, except: :index
 
     # @questions = current_user.questions
     @questions = Question.all
+    @user = current_user
+
 
  end
  def new
