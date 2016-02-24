@@ -1,15 +1,65 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+
+header {
+  height: 120px;
+  background-color: #02438a;
+  color: white;
+
+}
+
+
+.title {
+  font-family: "ＭＳ Ｐゴシック", "Osaka", sans-serif;
+}
+
+.description {
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,sans-serif;
+}
+
+li {
+  width: 240px;
+  margin: 15px 30px;
+  float: left;
+}
+
+.description{
+  clear: both;
+}
+
+#menu li p {
+  width: 240px;
+  height: 35px;
+  color: #ffffff;
+  background-color:navy;
+  padding: 15px 0px 0px 0px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+  height: 50px;
+  background-color: #02438a;
+
+}
+
+
+h1,p {
+  padding: 10px 0;
+  margin: 0;
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,sans-serif;
+}
+

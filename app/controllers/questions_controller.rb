@@ -4,7 +4,9 @@ before_action :authenticate_user!, except: :index
 
     # @questions = current_user.questions
     @questions = Question.all
+    @questions = Question.order("created_at DESC").page(params[:page]).per(5)
     @user = current_user
+
 
 
  end

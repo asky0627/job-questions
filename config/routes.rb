@@ -8,6 +8,6 @@ Rails.application.routes.draw do
  end
  resources :questions, only: [:create, :show]
  resources :users, only: :show
-# フォロー機能（あってるか不明）
+
 end
 

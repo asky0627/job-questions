@@ -1,3 +1,13 @@
+ <!DOCTYPE HTML>
+  <html>
+  <head>
+ <meta charset="UTF-8" />
+      <title>job_questions</title>
+       <link rel="stylesheet" href="questions.scss">
+  </head>
+
+  <body>
+
 
 <% unless current_user.follower? @user  %>
  <h2>まずは、あなたの興味に合うユーザーをフォローしましょう！</h2>
@@ -29,3 +39,8 @@
 
 
 <%= render partial: "questions/question", collection: @questions %>
+<%= paginate(@questions) %>
+
+
+  </body>
+  </html>
