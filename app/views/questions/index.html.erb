@@ -33,13 +33,15 @@
 
 <li><%= link_to " ログイン", new_user_session_path %></li>
 
-
-
 <% end %>
 
 
+
+
 <%= render partial: "questions/question", collection: @questions %>
-<%= paginate(@questions) %>
+ <%= paginate(@questions) %>
+
+
 
 
   </body>

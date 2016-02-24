@@ -1,15 +1,11 @@
 class QuestionsController < ApplicationController
 before_action :authenticate_user!, except: :index
+
  def index
-
-    # @questions = current_user.questions
-    @questions = Question.all
+    @questions = current_user.get_related_questions
     @questions = Question.order("created_at DESC").page(params[:page]).per(5)
-    @user = current_user
-
-
-
  end
+
  def new
   @question = Question.new
  end
@@ -31,3 +27,4 @@ private
   end
 
 end
+

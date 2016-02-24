@@ -43,16 +43,12 @@ li {
 
 
 
-
-
-
-
-
-
-
 footer {
   height: 50px;
   background-color: #02438a;
+  position: fixed;
+  bottom: 0;
+  width: 100%; -->
 
 }
 
