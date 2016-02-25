@@ -1,7 +1,17 @@
-<%= @user.name %>のユーザーページです。
-<div class="row form user_profile">
-<div class="col-lg-12">
-<div class="image" style="background-image: url(<%= @user.avatar.url(:medium) %>);"></div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JobQuestions</title>
+  <link rel="stylesheet" href="users.css">
+
+</head>
+
+<body>
+
+<h2><%= @user.name %>のユーザーページです。</h2>
+
+<div class="user_image"><%= image_tag  current_user.avatar %></div>
+
 
 <% if user_signed_in? %>
       <div class="profile_edit">
@@ -14,3 +24,7 @@
 
 
 <%= link_to "ホームに戻る", root_path %>
+
+
+</body>
+

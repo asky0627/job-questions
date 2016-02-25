@@ -1,8 +1,16 @@
 <section class="col-md-12">
   <div class="sct_inner">
     <p><%= link_to answer.user.name, user_path(answer.user) %>さんの回答</p>
+    <% if Like.where(user_id: current_user.id, answer_id: answer.id).present?%>
+    <p><%= link_to "DisLike", like_path(answer.id), method: :delete %>
+    <% else %>
+    <p><%= link_to "Like", likes_path(answer_id: answer.id), method: :post %>
+    <% end %>
+
+   <span><%= answer.likes_count %></span>
+    </p>
     <h4>→<%= answer.text %></h4>
   </div>
-　　<%= link_to "ホームに戻る", root_path %>
+<%= link_to "ホームに戻る", root_path %>
 
 </section>

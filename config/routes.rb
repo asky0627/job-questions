@@ -5,12 +5,11 @@ Rails.application.routes.draw do
  resources :users, only: [:show, :edit, :update, :index]
 
  resources :questions do
- resources :likes, only: [:create, :destroy]
- resources :answers, only: [:new, :create]
- resources :questions, only: [:create, :show]
+   resources :answers, only: [:new, :create]
+   resources :questions, only: [:create, :show]
+  end
 
-end
-
+  resources :likes, only: [:create, :destroy]
 end
 
 
