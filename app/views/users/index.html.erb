@@ -4,8 +4,32 @@
 <div class="contents row" >
   <% @users.each do |user| %>
     <p><%= user.name %></p> <%= link_to 'フォローする', relations_path({target_id: user.id, from_id: current_user}), method: :post %>
-    
+
   <% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>スキル・特技</th>
+      <th>興味・関心</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+
+ <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= render 'users/tag_list', tag_list: user.skill_list %></td>
+        <td><%= render 'users/tag_list', tag_list: user.interest_list %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 
 

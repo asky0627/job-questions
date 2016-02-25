@@ -9,8 +9,18 @@
 <body>
 
 <h2><%= @user.name %>のユーザーページです。</h2>
+ 
+<div class="user_image"><%= image_tag  current_user.avatar %></div> 
 
-<div class="user_image"><%= image_tag  current_user.avatar %></div>
+<table>
+  <thead>
+    <tr>
+      <th>スキル・特技</th>
+      <th>興味・関心</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
 
 
 <% if user_signed_in? %>

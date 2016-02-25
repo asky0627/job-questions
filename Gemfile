@@ -52,6 +52,6 @@ gem 'devise'
 gem 'pry-rails'
 gem 'kaminari'
 gem 'paperclip'
-
+gem 'acts-as-taggable-on', '~> 3.4'
 
 
