@@ -6,17 +6,11 @@ class User < ActiveRecord::Base
   has_many :questions
   has_many :answers
 
-
   has_many :follows_f, class_name: "Relation", foreign_key: :from_id
   has_many :followings, through: :follows_f, source: :target
 
   has_many :followers_f, class_name: "Relation", foreign_key: :target_id
   has_many :followers, through: :followers_f, source: :from
-
-
-
-
-
 
   has_attached_file :avatar, styles: { medium: "150x150>", thumb: "50x50>"}
   validates_attachment_content_type :avatar, content_type: ["image/jpg","image/jpeg","image/png"]

@@ -41,6 +41,9 @@
 <%= render partial: "questions/question", collection: @questions %>
  <%= paginate(@questions) %>
 
+<% @answers.each do |xyz|%>
+<%= render partial: "questions/like", locals: {abc: xyz} %>
+<% end %>
 
 
 
